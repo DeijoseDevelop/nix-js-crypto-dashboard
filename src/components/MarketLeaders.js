@@ -2,11 +2,6 @@ import { html, suspend, repeat } from "@deijose/nix-js";
 
 export const MarketLeaders = ({ loadMarketData, refreshMarket, settings, onSelectCoin, onLoadMore }) => {
 
-    console.log({
-        loadMarketData,
-
-    });
-
     const renderCoinItem = (coin) => {
         const isPositive = coin.price_change_percentage_24h > 0;
         const color = isPositive ? 'var(--accent-success)' : 'var(--accent-danger)';
